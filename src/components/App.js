@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import { StyleSheet, View, Text, Image, TouchableOpacity, FlatList } from "react-native";
 import Header from "./Header";
-
+import List from "./List";
 
 export default class App extends Component {
     
@@ -64,6 +64,12 @@ export default class App extends Component {
         return(
             <View style={styles.container}>
                 <Header />
+                <FlatList
+                    keyExtractor={(item) => item.id}
+                    showsHorizontalScrollIndicator={false}
+                    data={this.state.feed}
+                    renderItem={({item}) => <List data={item} />}
+                />
             </View>
         );
     }
