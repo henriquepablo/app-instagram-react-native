@@ -60,6 +60,11 @@ const style = StyleSheet.create({
         fontWeight: 'bold',
         color: '#000',
         paddingLeft: 5
+    },
+
+    likes: {
+        fontWeight: 'bold',
+        marginLeft: 5,
     }
 
 });
